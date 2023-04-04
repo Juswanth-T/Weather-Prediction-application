@@ -1,0 +1,210 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+html,body{
+  position: relative;
+  height: 100%;
+  width:100%;
+  background-image: url(world.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+}
+body::before{
+  content: '';
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  inset:0px
+
+}
+.page{
+  position: relative;
+}
+
+.header{
+  line-height:35px;
+  text-align: center;
+  background: rgb(76,108,152);
+  background: linear-gradient(90deg, rgba(76,108,152,1) 0%, rgba(31,56,78,1) 30%, rgba(33,51,66,1) 68%, rgba(76,108,152,1) 100%);  color: white;
+  font-size:25px;
+
+}
+.header span{
+  color:orange;
+}
+
+.content1{
+  margin-top:10px;
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content1 input{
+  padding: 5px;
+  width:300px
+}
+.content1 button{
+  padding:5px;
+  width:100px;
+}
+
+.content11{
+position:absolute;
+left:80px;
+font-size: 50px;
+color:rgb(214, 224, 255);
+}
+
+.content12{
+  text-align: center;
+  position:relative;
+}
+
+.content12 input{
+background-color: rgb(243, 235, 222);
+}
+
+.content12 button{
+  background-color:#4c6c98;
+  color:white;
+  cursor: pointer;
+  padding:7px;
+  border:1px;
+  border-radius: 3px;
+}
+
+.content12 button:hover{
+  opacity: 0.8;
+}
+.day1{
+  display: flex;
+  margin-left: 20px;
+  margin-top:10px;
+  margin-right: 20px;
+  border: solid;
+
+}
+.dayimg{
+ display: flex;
+
+}
+
+.dayimg div{
+  position: relative;
+  top:30px;
+  left:10px;
+}
+
+.imgday1{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  left: 150px;
+}
+
+.day1con{
+   position: relative;
+   left:250px;
+   top:20px;
+
+}
+.day11{
+  font-size: 50px;
+}
+.day11 span{
+  margin-left:4px;
+  font-size:15px
+}
+.condition1{
+  font-size: 40px;
+  color:orange;
+  margin-top: 7px;
+}
+.temp1 {
+  font-size:25px;
+  color:rgb(214, 224, 255);
+}
+
+.humidity1{
+font-size:25px;
+color:rgb(214, 224, 255);
+}
+
+.wind1{
+  font-size:25px;
+  color:rgb(214, 224, 255);
+  position:relative;
+  top:20px;
+  left:140px;
+}
+.row1{
+  display: flex;
+  gap:100px;
+}
+
+.row2{
+  margin-top:20px;
+  display: flex;
+  gap:77px;
+}
+.restdays{
+  display:flex;
+  margin-top:10px;
+}
+
+.day2{
+  border: solid;
+  height:240px;
+  width:195px;
+  margin-left: 20px;
+
+}
+
+.imgday2,.imgday3,.imgday4,.imgday5,.imgday6,.imgday7{
+  height:100px;
+  width:100px;
+}
+
+.day2con,.day3con,.day4con,.day5con,.day6con,.day7con{
+  margin-left:10px;
+  font-size:18px;
+  color:rgb(214, 224, 255);
+}
+.weekday2,.weekday3,.weekday4,.weekday5,.weekday6,.weekday7{
+  font-size: 30px;
+}
+
+.condition2,.condition3,.condition4,.condition5,.condition6,.condition7{
+  font-size: 30px;
+  color:orange
+}
+.day3,.day4,.day5,.day6,.day7{
+  border: solid;
+  height:240px;
+  width:194px;
+  margin-left: 10px;
+}
+
+footer{
+  line-height:35px;
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  text-align: center;
+  background: rgb(76,108,152);
+  background: linear-gradient(90deg, rgba(76,108,152,1) 0%, rgba(31,56,78,1) 30%, rgba(33,51,66,1) 68%, rgba(76,108,152,1) 100%);  color: white;
+  font-size:20px;
+
+}
+
+.Notavailable{
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+footer span{
+  color:orange;
+}
