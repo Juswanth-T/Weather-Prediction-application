@@ -7,11 +7,6 @@ function displayWeather(pcity){
     const humidity1 = document.querySelector(".humidity1")
     const wind1 = document.querySelector(".wind1")
     const date1 = document.querySelector(".day11 span")
-    const clr1 = document.querySelector(".day1")
-    const clr2 = document.querySelector(".restdays")
-    const err = document.querySelector(".Notavailable")
-
-
     
     const img2 = document.querySelector(".imgday2")
     const condition2 = document.querySelector(".condition2")
@@ -73,9 +68,7 @@ function displayWeather(pcity){
     fetch(url).then((response)=> response.json()).then((info)=>{
 
         if(info.error){
-           clr1.innerHTML= ""
-           clr2.innerHTML= ""
-           err.innerHTML = "Sorry, Weather is data not available for the entered city";
+           alert("Sorry, Weather is data not available for the entered city");
 
         }
         else{
