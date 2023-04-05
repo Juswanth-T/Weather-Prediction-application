@@ -7,6 +7,7 @@ function displayWeather(pcity){
     const humidity1 = document.querySelector(".humidity1")
     const wind1 = document.querySelector(".wind1")
     const date1 = document.querySelector(".day11 span")
+
     
     const img2 = document.querySelector(".imgday2")
     const condition2 = document.querySelector(".condition2")
@@ -61,17 +62,19 @@ function displayWeather(pcity){
     const weekday7 = document.querySelector(".weekday7")
 
 
-    content11.innerHTML= pcity
+   
     const apiKey = "7b23acfd56614597980153421230304";
     let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${pcity}&days=7`
     let results = []
     fetch(url).then((response)=> response.json()).then((info)=>{
 
         if(info.error){
-           alert("Sorry, Weather is data not available for the entered city");
+        
+           alert("Sorry, Weather data is not available for the entered city");
 
         }
         else{
+        content11.innerHTML= pcity
         const data = info.forecast.forecastday;
             for (let day in data) {
                 console.log(day)
@@ -100,20 +103,51 @@ function displayWeather(pcity){
     const date6 = new Date(dateString6);  
     const date7 = new Date(dateString7);  
 
-    const conditionText = "Patchy rain possible";
-    if(results[0][1] == conditionText) cond1 = "Patchy rain";
+    const conditionText1 = "Patchy rain possible";
+    const conditionText2 = "Moderate or heavy snow showers";
+    const conditionText3 = "Light freezing rain";
+    const conditionText4 = "Patchy moderate snow";
+
+    if(results[0][1] == conditionText1) cond1 = "Patchy rain";
+    else if (results[0][1] == conditionText2) cond1 = "Snow showers";
+    else if (results[0][1] ==  conditionText3) cond1 = "Freezing rain";
+    else if (results[0][1] == conditionText4) cond1 = "Patchy snow";
     else cond1 = results[0][1]
-    if(results[1][1] == conditionText) cond2 = "Patchy rain";
+
+    if(results[1][1] == conditionText1) cond2 = "Patchy rain";
+    else if (results[1][1] == conditionText2) cond2 = "Snow showers";
+    else if (results[1][1] ==  conditionText3) cond2 = "Freezing rain";
+    else if (results[1][1] == conditionText4) cond2 = "Patchy snow";
     else cond2 = results[1][1]
-    if(results[2][1] == conditionText) cond3 = "Patchy rain";
+
+    if(results[2][1] == conditionText1) cond3 = "Patchy rain";
+    else if (results[2][1] == conditionText2) cond3 = "Snow showers";
+    else if (results[2][1] ==  conditionText3) cond3 = "Freezing rain";
+    else if (results[2][1] == conditionText4) cond3 = "Patchy snow";
     else cond3 = results[2][1]
-    if(results[3][1] == conditionText) cond4 = "Patchy rain";
+
+    if(results[3][1] == conditionText1) cond4 = "Patchy rain";
+    else if (results[3][1] == conditionText2) cond4 = "Snow showers";
+    else if (results[3][1] ==  conditionText3) cond4 = "Freezing rain";
+    else if (results[3][1] == conditionText4) cond4 = "Patchy snow";
     else cond4 = results[3][1]
-    if(results[4][1] == conditionText) cond5 = "Patchy rain";
+
+    if(results[4][1] == conditionText1) cond5 = "Patchy rain";
+    else if (results[4][1] == conditionText2) cond5 = "Snow showers";
+    else if (results[4][1] ==  conditionText3) cond5 = "Freezing rain";
+    else if (results[4][1] == conditionText4) cond5 = "Patchy snow";
     else cond5 = results[4][1]
-    if(results[5][1] == conditionText) cond6 = "Patchy rain";
+
+    if(results[5][1] == conditionText1) cond6 = "Patchy rain";
+    else if (results[5][1] == conditionText2) cond6 = "Snow showers";
+    else if (results[5][1] ==  conditionText3) cond6 = "Freezing rain";
+    else if (results[5][1] == conditionText4) cond6 = "Patchy snow";
     else cond6 = results[5][1]
-    if(results[6][1] == conditionText) cond7 = "Patchy rain";
+
+    if(results[6][1] == conditionText1) cond7 = "Patchy rain";
+    else if (results[6][1] == conditionText2) cond7 = "Snow showers";
+    else if (results[6][1] ==  conditionText3) cond7 = "Freezing rain";
+    else if (results[6][1] == conditionText4) cond7 = "Patchy snow";
     else cond7 = results[6][1]
     
     
@@ -190,5 +224,19 @@ function displayInputValue() {
 
   
 displayWeather("Delhi")
+
+function updateTime(){
+    var now = new Date();
+    var gmtHours = now.getUTCHours();
+    var gmtMinutes = now.getUTCMinutes().toString().padStart(2, '0');
+    var gmtSeconds = now.getUTCSeconds().toString().padStart(2, '0');
+    var currentTime = gmtHours + ':' + gmtMinutes + ':' + gmtSeconds + " GMT";
+    const time = document.querySelector(".time");
+    time.innerHTML = currentTime;
+ 
+}
+
+setInterval(updateTime, 1000);
+
 
 
