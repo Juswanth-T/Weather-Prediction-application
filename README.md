@@ -1,4 +1,4 @@
-**Weather Forecast Application**
+**Weather Forecast Application**  
 
 Welcome to the Weather Forecast application! This project is a web-based weather application developed using JavaScript, HTML, and CSS. It provides real-time weather updates and detailed forecasts for the next six days across cities worldwide.
 
