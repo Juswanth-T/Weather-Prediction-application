@@ -3,8 +3,8 @@ Welcome to the Weather Forecast application! This project is a web-based weather
 
 <h2> Features </h2>  
 
-- Real time Weather Updates: Stay informed about the current weather conditions in various cities around the globe.
+- **Real time Weather Updates:** Stay informed about the current weather conditions in various cities around the globe.
 
-- Detailed Forecasts: Get accurate and detailed weather forecasts for the next six days, helping you plan your activities accordingly.
+- **Detailed Forecasts:** Get accurate and detailed weather forecasts for the next six days, helping you plan your activities accordingly.
 
-- Dynamic Content: The application leverages WeatherAPI data to dynamically adapt images and content based on the current weather conditions. This ensures a visually appealing and informative experience.
+- **Dynamic Content:** The application leverages WeatherAPI data to dynamically adapt images and content based on the current weather conditions. This ensures a visually appealing and informative experience.
